@@ -1,0 +1,251 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/dark-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #f1f1f1;
+  padding: 20px;
+  position: relative;
+}
+
+/* Dark overlay for better contrast */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(169, 155, 155, 0.7);
+  z-index: -1;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #e65100;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+/* Navbar */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+nav a {
+  color: #fff;
+  background-color: #ff5722;
+  padding: 10px 18px;
+  margin: 0 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  background-color: #e64a19;
+}
+
+/* Food Cards */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.item h3 {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.item p {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* Order Button */
+.item a {
+  display: inline-block;
+  background-color: #ff7043;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.item a:hover {
+  background-color: #e64a19;
+}
+
+/* Form Styling */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form button {
+  width: 100%;
+  background-color: #43a047;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+/* Orders Table (Admin) */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 95%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #ff7043;
+  color: white;
+  font-weight: bold;
+}
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  max-width: 700px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+/* Order Button */
+.order-btn {
+  background: #ff5722;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+}
+
+.order-btn:hover {
+  background: #e64a19;
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+  transform: scale(1.05);
+}
+.success-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.success-container h1 {
+  color: #43a047;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.success-container p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #e64a19;
+  box-shadow: 0 0 10px rgba(255,87,34,0.5);
+}
+
